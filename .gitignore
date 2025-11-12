@@ -1,0 +1,19 @@
+# Terraform system files
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# IDE / temp files
+*.log
+*.tmp
+*.bak
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# SSH key filesRemove-Item -Recurse -Force .git
+
+*.pem
+*.ppk
