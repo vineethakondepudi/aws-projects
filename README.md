@@ -213,4 +213,22 @@ for row in rows:
 
 connection.close()
 
+=>aws sts get-caller-identity(Check AWS CLI credentials) -> aws configure(Configure credentials) -> AWS IAM → Users → Security credentials → Create access key -> Make sure it belongs to a user with EC2 permissions.
+
+=> Verify credentials file(C:\Users\<your_username>\.aws\credentials)
+=> sudo yum install python3-pip -y (Install pip for Python 3) -> pip3 --version (Verify pip installation) -> sudo pip3 install pymysql (sudo pip3 install mysql-connector-python) -> python3 -m pip show mysql-connector-python (verify) 
+=> scp -i "C:\Users\vinee\.ssh\vinnu-ssh.pem" D:\aws\python\db.py ec2-user@ec2-3-109-58-106.ap-south-1.compute.amazonaws.com:/home/ec2-user/ (Copy the local file to EC2) -> mv /home/ec2-user/db.py /root/ -> ls /root/ (Verify inside EC2) 
+=> docker exec -it mysqlcont123 bash (MySQL inside the container) -> mysql -u root -p (ask password) -> use db_name -> show tables -> select * from table name 
+(or)
+=> python3 python-mysql.py (Then back on your EC2:)
+=> You should see the output:
+Employees Data:
+(1, 'vineetha', 'IT', 65000.0)
+(2, 'eswari', 'HR', 150000.0)
+(3, 'siva', 'Finance', 72000.0)
+...
+
+
+
+
 
